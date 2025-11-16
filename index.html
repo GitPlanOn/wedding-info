@@ -6,23 +6,28 @@
     <title>Praniti & Ashlesh</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter (Body Text) and Arizonia (Title Script) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Arizonia&display=swap" rel="stylesheet">
     <style>
         /* Custom Tailwind Configuration */
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary-accent': '#7c3aed', /* Deep Violet */
-                        'secondary-bg': '#f3f4f6', /* Light Gray */
-                        'text-dark': '#1f2937',   /* Dark Gray */
+                        /* --- CUSTOM COLORS EXTRACTED FROM YOUR LOGO --- */
+                        'primary-accent': '#8D643E', /* Deep Brownish-Gold (Text, Buttons, Borders) */
+                        'secondary-bg': '#fefcfc', /* Nearly White, Slight Warmth */
+                        'text-dark': '#1f2937',    /* Dark Gray */
+                        'header-start': '#E0C286', /* Light Metallic Gold (Gradient Start) */
+                        'header-end': '#D1A65E',   /* Deeper Metallic Gold (Gradient End) */
+                        /* ----------------------------------------------- */
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        title: ['Arizonia', 'cursive'], /* Elegant script font for the main title */
                     },
                     boxShadow: {
-                        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.2)',
+                        'soft': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
                     }
                 }
             }
@@ -34,49 +39,66 @@
     <!-- Main Container -->
     <div class="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
 
-        <!-- Header & Main Title -->
-        <header class="text-center py-10 bg-white rounded-t-xl shadow-lg border-b-4 border-primary-accent">
-            <p class="text-lg text-primary-accent mb-2">How to attend the wedding of</p>
-            <h1 class="text-5xl sm:text-7xl font-bold tracking-tight text-text-dark">
+        <!-- Header & Main Title with Gradient -->
+        <header class="text-center py-10 bg-gradient-to-r from-header-start to-header-end rounded-t-xl shadow-xl">
+            
+            <!-- YOUR ACTUAL LOGO IMAGE -->
+            <img id="wedding-logo" 
+                 src="uploaded:A.jpg-9ea0ff99-ee1d-4039-a324-af88a60bf72d" 
+                 alt="Praniti and Ashlesh Wedding Monogram" 
+                 class="mx-auto w-40 h-40 mb-4 shadow-xl object-cover">
+            
+            <p class="text-lg text-white mb-2 font-medium tracking-wide">How to attend the wedding of</p>
+            
+            <!-- NAMES WITH ELEGANT SCRIPT FONT -->
+            <h1 class="text-6xl sm:text-8xl font-title tracking-tight text-white flex justify-center items-center">
                 Praniti & Ashlesh
             </h1>
-            <p class="mt-4 text-xl sm:text-2xl italic text-gray-500">
+            
+            <p class="mt-4 text-xl sm:text-2xl italic text-white/90">
                 for your convenience
             </p>
         </header>
 
         <!-- Main Content Grid -->
-        <main class="bg-white p-6 sm:p-10 rounded-b-xl shadow-lg mb-8">
+        <main class="bg-white p-6 sm:p-10 rounded-b-xl shadow-xl mb-8">
 
             <!-- Quirk & Catchy Motto (Your instruction line) -->
             <div class="text-center mb-10 pt-4">
-                <h2 class="text-2xl font-semibold text-primary-accent border-b pb-3 mx-auto max-w-sm">
-                    just click
+                <h2 class="text-2xl font-semibold text-primary-accent border-b-2 border-primary-accent/50 pb-3 mx-auto max-w-sm">
+                    All set! Just click for directions.
                 </h2>
             </div>
             
             <!-- 1. EVENT BLOCK: Engagement -->
-            <section class="mb-10 p-6 bg-secondary-bg rounded-xl shadow-inner">
-                <h3 class="text-3xl font-bold mb-4 text-primary-accent">Engagement</h3>
+            <section class="mb-10 p-6 bg-secondary-bg rounded-xl shadow-soft">
+                <!-- Decorative Ribbon SVG -->
+                <div class="flex justify-center mb-2">
+                    <svg class="w-24 h-4 text-primary-accent" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 10H95" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-primary-accent text-center">Engagement</h3>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                     
-                    <!-- Date Card -->
-                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <!-- Date Card (SIZE ADJUSTED) -->
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
                         <p class="text-sm text-gray-500 uppercase tracking-wider">Date</p>
-                        <p class="text-3xl font-extrabold mt-1 text-text-dark">21</p>
+                        <p class="text-2xl font-bold mt-1 text-text-dark">21</p>
                         <p class="text-lg font-medium text-primary-accent">December 2025</p>
                     </div>
 
                     <!-- Time Card -->
-                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
                         <p class="text-sm text-gray-500 uppercase tracking-wider">Time</p>
                         <p class="text-xl font-bold mt-1 text-text-dark">11:00 AM</p>
                         <p class="text-base text-gray-600">Onwards</p>
                     </div>
 
                     <!-- Location Card -->
-                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
                         <p class="text-sm text-gray-500 uppercase tracking-wider">Venue</p>
                         <p class="text-xl font-bold mt-1 text-text-dark">Sanjog Lawns</p>
                         <p class="text-base text-gray-600">Ahilyanagar</p>
@@ -84,34 +106,41 @@
                 </div>
 
                 <div class="mt-6 border-t pt-4 text-center">
-                    <a href="https://maps.app.goo.gl/DKdosm2pZtSgJQ9Y7" target="_blank" class="inline-block mt-3 text-white bg-primary-accent hover:bg-violet-600 transition py-2 px-8 rounded-full font-semibold text-lg shadow-md">
+                    <a href="https://maps.app.goo.gl/DKdosm2pZtSgJQ9Y7" target="_blank" class="inline-block mt-3 text-white bg-primary-accent hover:bg-neutral-800 transition py-2 px-8 rounded-full font-semibold text-lg shadow-md">
                         Get Directions on Google Maps
                     </a>
                 </div>
             </section>
             
             <!-- 2. EVENT BLOCK: Wedding Ceremony -->
-            <section class="mb-10 p-6 bg-secondary-bg rounded-xl shadow-inner">
-                <h3 class="text-3xl font-bold mb-4 text-primary-accent">Wedding Ceremony</h3>
+            <section class="mb-10 p-6 bg-secondary-bg rounded-xl shadow-soft">
+                <!-- Decorative Ribbon SVG -->
+                <div class="flex justify-center mb-2">
+                    <svg class="w-24 h-4 text-primary-accent" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 10H95" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-primary-accent text-center">Wedding Ceremony</h3>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                     
-                    <!-- Date Card -->
-                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <!-- Date Card (SIZE ADJUSTED) -->
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
                         <p class="text-sm text-gray-500 uppercase tracking-wider">Date</p>
-                        <p class="text-3xl font-extrabold mt-1 text-text-dark">07</p>
+                        <p class="text-2xl font-bold mt-1 text-text-dark">07</p>
                         <p class="text-lg font-medium text-primary-accent">January 2026</p>
                     </div>
 
                     <!-- Time Card -->
-                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
                         <p class="text-sm text-gray-500 uppercase tracking-wider">Time</p>
                         <p class="text-xl font-bold mt-1 text-text-dark">6:00 PM</p>
                         <p class="text-base text-gray-600">Onwards</p>
                     </div>
 
                     <!-- Location Card -->
-                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 border border-gray-100">
                         <p class="text-sm text-gray-500 uppercase tracking-wider">Venue</p>
                         <p class="text-xl font-bold mt-1 text-text-dark">Tropical Retreat</p>
                         <p class="text-base text-gray-600">Igatpuri</p>
@@ -119,16 +148,23 @@
                 </div>
 
                 <div class="mt-6 border-t pt-4 text-center">
-                    <a href="https://maps.app.goo.gl/UGbbBbPxjgh5jwyG6" target="_blank" class="inline-block mt-3 text-white bg-primary-accent hover:bg-violet-600 transition py-2 px-8 rounded-full font-semibold text-lg shadow-md">
+                    <a href="https://maps.app.goo.gl/UGbbBbPxjgh5jwyG6" target="_blank" class="inline-block mt-3 text-white bg-primary-accent hover:bg-neutral-800 transition py-2 px-8 rounded-full font-semibold text-lg shadow-md">
                         Get Directions on Google Maps
                     </a>
                 </div>
             </section>
             
-            <!-- 3. KEY CONTACTS: GROOM'S SIDE -->
-            <section class="mb-10 p-6 border border-primary-accent/50 rounded-xl bg-primary-accent/5">
-                <h3 class="text-3xl font-bold mb-4 text-primary-accent">Ladkewale</h3>
-                <p class="text-gray-600 mb-6">Please contact the following members for any queries regarding the Groom's arrangements:</p>
+            <!-- 3. KEY CONTACTS: GROOM'S SIDE (LADKEWALE) -->
+            <section class="mb-10 p-6 border border-primary-accent/50 rounded-xl bg-primary-accent/5 shadow-soft">
+                <!-- Decorative Ribbon SVG -->
+                <div class="flex justify-center mb-2">
+                    <svg class="w-24 h-4 text-primary-accent" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 10H95" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-primary-accent text-center">Ladkewale</h3>
+                <p class="text-gray-600 mb-6 text-center">Please contact the following members for any queries regarding the Groom's arrangements:</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     
@@ -136,29 +172,36 @@
                     <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
                         <p class="font-bold text-lg">Father</p>
                         <p class="text-sm text-gray-500 mb-1">Mr. Harish Khedkar, DySP</p>
-                        <a href="tel:+15551112222" class="text-base text-blue-600 hover:underline font-medium">(+91) 86930-31333</a>
+                        <a href="tel:+918693031333" class="text-base text-blue-600 hover:underline font-medium">(+91) 86930-31333</a>
                     </div>
                     
                     <!-- Contact 2: Groom's Brother -->
                     <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
                         <p class="font-bold text-lg">Brother</p>
                         <p class="text-sm text-gray-500 mb-1">Devansh Khedkar</p>
-                        <a href="tel:+15553334444" class="text-base text-blue-600 hover:underline font-medium">(+91) 90216-00016</a>
+                        <a href="tel:+919021600016" class="text-base text-blue-600 hover:underline font-medium">(+91) 90216-00016</a>
                     </div>
                     
                     <!-- Contact 3: Groom's Friend -->
                     <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
                         <p class="font-bold text-lg">Friend</p>
                         <p class="text-sm text-gray-500 mb-1">Mr. Deven Pagar</p>
-                        <a href="tel:+15555556666" class="text-base text-blue-600 hover:underline font-medium">(+91) 98607-59436</a>
+                        <a href="tel:+919860759436" class="text-base text-blue-600 hover:underline font-medium">(+91) 98607-59436</a>
                     </div>
                 </div>
             </section>
 
-            <!-- 4. KEY CONTACTS: BRIDE'S SIDE -->
-            <section class="mb-10 p-6 bg-secondary-bg rounded-xl shadow-inner">
-                <h3 class="text-3xl font-bold mb-4 text-primary-accent">Ladkiwale</h3>
-                <p class="text-gray-600 mb-6">Please contact the following members for any queries regarding the Bride's arrangements:</p>
+            <!-- 4. KEY CONTACTS: BRIDE'S SIDE (LADKIWALE) -->
+            <section class="mb-10 p-6 bg-secondary-bg rounded-xl shadow-soft">
+                <!-- Decorative Ribbon SVG -->
+                <div class="flex justify-center mb-2">
+                    <svg class="w-24 h-4 text-primary-accent" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 10H95" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-primary-accent text-center">Ladkiwale</h3>
+                <p class="text-gray-600 mb-6 text-center">Please contact the following members for any queries regarding the Bride's arrangements:</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     
@@ -166,29 +209,36 @@
                     <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
                         <p class="font-bold text-lg">Father</p>
                         <p class="text-sm text-gray-500 mb-1">Mr. Ashok Raskar</p>
-                        <a href="tel:+15557778888" class="text-base text-blue-600 hover:underline font-medium">(+91) 98816-62667</a>
+                        <a href="tel:+919881662667" class="text-base text-blue-600 hover:underline font-medium">(+91) 98816-62667</a>
                     </div>
                     
                     <!-- Contact 2: Bride's Brother -->
                     <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
                         <p class="font-bold text-lg">Brother</p>
                         <p class="text-sm text-gray-500 mb-1">Mr. Amit Raskar</p>
-                        <a href="tel:+15559990000" class="text-base text-blue-600 hover:underline font-medium">(+91) 95952-51296</a>
+                        <a href="tel:+919595251296" class="text-base text-blue-600 hover:underline font-medium">(+91) 95952-51296</a>
                     </div>
                     
                     <!-- Contact 3: Bride's Friend -->
                     <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
                         <p class="font-bold text-lg">Friend</p>
                         <p class="text-sm text-gray-500 mb-1">Ms. Vaibhav Mahant</p>
-                        <a href="tel:+15551011121" class="text-base text-blue-600 hover:underline font-medium">(+91) 95797-85919</a>
+                        <a href="tel:+919579785919" class="text-base text-blue-600 hover:underline font-medium">(+91) 95797-85919</a>
                     </div>
                 </div>
             </section>
             
             <!-- 5. VENUE EMERGENCY CONTACTS -->
-            <section class="mb-8 p-6 border border-red-500/50 rounded-xl bg-red-500/5">
-                <h3 class="text-3xl font-bold mb-4 text-red-700">Venue Emergency Contacts</h3>
-                <p class="text-gray-700 mb-6 font-semibold">
+            <section class="mb-8 p-6 border border-red-500/50 rounded-xl bg-red-500/5 shadow-soft">
+                <!-- Decorative Ribbon SVG -->
+                <div class="flex justify-center mb-2">
+                    <svg class="w-24 h-4 text-primary-accent" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 10H95" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-red-700 text-center">Venue Emergency Contacts</h3>
+                <p class="text-gray-700 mb-6 font-semibold text-center">
                     In case all of these people are busy, contact the reception centres at our venues.
                 </p>
                 
@@ -201,7 +251,7 @@
                         </svg>
                         <div>
                             <p class="font-bold">Sanjog Lawns (Engagement)</p>
-                            <a href="tel:+15551002003" class="text-sm text-blue-600 hover:underline">(+91) 99606 26660</a>
+                            <a href="tel:+919960626660" class="text-sm text-blue-600 hover:underline">(+91) 99606 26660</a>
                         </div>
                     </div>
                     
@@ -212,7 +262,7 @@
                         </svg>
                         <div>
                             <p class="font-bold">Tropical Retreat (Wedding)</p>
-                            <a href="tel:+15553004005" class="text-sm text-blue-600 hover:underline">(+91) 82687 67676</a>
+                            <a href="tel:+918268767676" class="text-sm text-blue-600 hover:underline">(+91) 82687 67676</a>
                         </div>
                     </div>
                 </div>
